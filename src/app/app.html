@@ -1,9 +1,7 @@
 <h1>{{ title() }}</h1>
 
-<a [routerLink]="['dashboard']">Go to Dashboard</a>
-
-<ns-about-this-app />
-
-<ns-give-me-help />
+<p><a [routerLink]="['dashboard']">Go to Dashboard</a></p>
+<p><a [routerLink]="['about']">About This App</a></p>
+<p><a routerLink="help">Help</a></p>
 
 <router-outlet />

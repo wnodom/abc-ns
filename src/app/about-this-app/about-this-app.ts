@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './about-this-app.scss',
   templateUrl: './about-this-app.html',
 })
-export class AboutThisApp {}
+export default class AboutThisApp {}
