@@ -9,4 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('workshop-app');
+
+  changeTheTitle() {
+    console.log('I am changing the title');
+    this.title.update((v) => v + '!');
+  }
 }
