@@ -1,17 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AboutThisApp } from './about-this-app/about-this-app';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, AboutThisApp],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('workshop-app');
-
-  changeTheTitle() {
-    console.log('I am changing the title');
-    this.title.update((v) => v + '!');
-  }
+  protected readonly title = signal('Video Manager');
 }
