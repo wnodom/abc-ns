@@ -14,4 +14,8 @@ export const routes: Routes = [
     path: 'help',
     loadComponent: () => import('./give-me-help/give-me-help').then((m) => m.GiveMeHelp),
   },
+  {
+    path: '**',
+    loadComponent: () => import('./give-me-help/give-me-help').then((m) => m.GiveMeHelp),
+  },
 ];
