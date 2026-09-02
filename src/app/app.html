@@ -1,6 +1,8 @@
 <h1>
   @if (noisy()) {
-    {{ title().toUpperCase() + '!!' }}
+    <div>
+      {{ (title() | uppercase) + '!!' }}
+    </div>
   } @else {
     {{ title().toLowerCase() }}
   }

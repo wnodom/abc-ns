@@ -1,8 +1,9 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, UpperCasePipe],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
