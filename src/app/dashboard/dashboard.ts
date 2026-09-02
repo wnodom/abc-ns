@@ -3,11 +3,11 @@ import { VideoList } from '../video-list/video-list';
 import { VideoPlayer } from '../video-player/video-player';
 import { StatFilters } from '../stat-filters/stat-filters';
 
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { VideoDataManager } from '../video-data-manager';
 
 @Component({
-  imports: [VideoList, VideoPlayer, StatFilters, AsyncPipe, JsonPipe],
+  imports: [VideoList, VideoPlayer, StatFilters, AsyncPipe],
   selector: 'ns-dashboard',
   styleUrl: './dashboard.scss',
   templateUrl: './dashboard.html',

@@ -6,7 +6,7 @@ import { Video } from './video-types';
 
 @Service()
 export class VideoDataManager {
-  http = inject(HttpClient);
+  private readonly http = inject(HttpClient);
 
   private uppercaseAllAuthorNames(videos: Video[]) {
     return videos.map((v: Video) => ({
@@ -15,7 +15,7 @@ export class VideoDataManager {
     }));
   }
 
-  loadVideos() {
+  public loadVideos() {
     return this.http
       .get<Video[]>('https://api.angularbootcamp.com/videos')
       .pipe(

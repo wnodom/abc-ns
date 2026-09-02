@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Video } from '../video-types';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-  imports: [],
+  imports: [JsonPipe],
   selector: 'ns-video-list',
   styleUrl: './video-list.scss',
   templateUrl: './video-list.html',
 })
-export class VideoList {}
+export class VideoList {
+  public readonly videos = input<Video[] | null>();
+}

@@ -1,7 +1,5 @@
 <h2>Dashboard</h2>
 
-<ns-video-list />
+<ns-video-list [videos]="videos$ | async" />
 <ns-video-player />
 <ns-stat-filters />
-
-<pre>{{ videos$ | async | json }}</pre>
