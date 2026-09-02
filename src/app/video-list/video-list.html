@@ -1,3 +1,10 @@
-<p>video-list works!</p>
+<h3>Video List</h3>
 
-<pre>{{ videos() | json }}</pre>
+@for (video of videos(); track video.id) {
+  <p>
+    {{ video.title }}<br />
+    {{ video.author }}
+  </p>
+} @empty {
+  No videos to show!
+}

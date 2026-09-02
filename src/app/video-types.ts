@@ -7,6 +7,6 @@ interface ViewDetail {
 export interface Video {
   id: string;
   author: string;
-  name: string;
+  title: string;
   viewDetails: ViewDetail[];
 }

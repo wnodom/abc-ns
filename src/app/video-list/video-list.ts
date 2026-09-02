@@ -1,9 +1,8 @@
 import { Component, input } from '@angular/core';
 import { Video } from '../video-types';
-import { JsonPipe } from '@angular/common';
 
 @Component({
-  imports: [JsonPipe],
+  imports: [],
   selector: 'ns-video-list',
   styleUrl: './video-list.scss',
   templateUrl: './video-list.html',
