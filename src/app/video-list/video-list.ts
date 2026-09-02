@@ -9,5 +9,5 @@ import { JsonPipe } from '@angular/common';
   templateUrl: './video-list.html',
 })
 export class VideoList {
-  public readonly videos = input<Video[] | null>();
+  public readonly videos = input.required<Video[]>();
 }

@@ -1,5 +1,7 @@
+@let videos = (videos$ | async) ?? [];
+
 <h2>Dashboard</h2>
 
-<ns-video-list [videos]="videos$ | async" />
+<ns-video-list [videos]="videos" />
 <ns-video-player />
 <ns-stat-filters />
