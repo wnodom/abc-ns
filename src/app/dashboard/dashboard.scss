@@ -1,3 +1,23 @@
 :host {
-  display: block;
+  display: grid;
+
+  grid-template:
+    ' header header header  ' auto
+    ' list   player filters ' 1fr
+    / 1fr 2fr 1fr;
+}
+
+h2 {
+  grid-area: header;
+}
+
+ns-video-list {
+  grid-area: list;
+}
+ns-video-player {
+  grid-area: player;
+}
+
+ns-stat-filters {
+  grid-area: filters;
 }
