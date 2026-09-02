@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, tap } from 'rxjs';
 
 import { Video } from './video-types';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Service()
 export class VideoDataManager {
@@ -13,6 +14,12 @@ export class VideoDataManager {
       ...v,
       author: v.author.toUpperCase(),
     }));
+  }
+
+  public loadVideosAsSignal() {
+    return toSignal(inject(VideoDataManager).loadVideos(), {
+      initialValue: [],
+    });
   }
 
   public loadVideos() {
