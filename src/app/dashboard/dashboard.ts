@@ -13,7 +13,5 @@ import { VideoDataManager } from '../video-data-manager';
   templateUrl: './dashboard.html',
 })
 export default class Dashboard {
-  private readonly svc = inject(VideoDataManager);
-
-  protected readonly videos$ = this.svc.loadVideos();
+  protected readonly videos$ = inject(VideoDataManager).loadVideos();
 }
