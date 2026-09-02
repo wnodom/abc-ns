@@ -1,7 +1,11 @@
 <h1>{{ title() }}</h1>
 
-<p><a [routerLink]="['dashboard']">Go to Dashboard</a></p>
-<p><a [routerLink]="['about']">About This App</a></p>
-<p><a routerLink="help">Help</a></p>
+<nav>
+  <ul>
+    <li><a [routerLink]="['dashboard']">Go to Dashboard</a></li>
+    <li><a [routerLink]="['about']">About This App</a></li>
+    <li><a routerLink="help">Help</a></li>
+  </ul>
+</nav>
 
 <router-outlet />
