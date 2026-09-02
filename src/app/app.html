@@ -1,4 +1,14 @@
-<h1>{{ title() }}</h1>
+<h1>
+  @if (noisy()) {
+    {{ title().toUpperCase() + '!!' }}
+  } @else {
+    {{ title().toLowerCase() }}
+  }
+</h1>
+
+<button (click)="noisy.update((n) => !n)">
+  Make title {{ noisy() ? 'quiet' : 'noisy' }}
+</button>
 
 <nav>
   <ul>

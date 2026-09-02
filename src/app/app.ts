@@ -9,4 +9,6 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Video Manager');
+
+  protected readonly noisy = signal(false);
 }
