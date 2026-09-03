@@ -1,10 +1,13 @@
 <h3>Video List</h3>
 
 @for (video of videos(); track video.id) {
-  <p>
+  <button
+    (click)="currentVideo.set(video)"
+    [class.highlighted]="video === currentVideo()"
+  >
     {{ video.title }}<br />
     {{ video.author }}
-  </p>
+  </button>
 } @empty {
   No videos to show!
 }

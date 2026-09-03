@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, effect, input, signal } from '@angular/core';
 import { Video } from '../video-types';
 
 @Component({
@@ -9,4 +9,10 @@ import { Video } from '../video-types';
 })
 export class VideoList {
   public readonly videos = input.required<Video[]>();
+
+  protected readonly currentVideo = signal<Video | undefined>(undefined);
+
+  private readonly currentVideoEffect = effect(() => {
+    console.log(this.currentVideo());
+  });
 }

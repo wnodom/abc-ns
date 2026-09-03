@@ -1,3 +1,13 @@
 :host {
   display: block;
 }
+
+.highlighted {
+  outline: 3px solid red;
+}
+
+button {
+  all: unset;
+
+  margin-block: 0.25rem;
+}
