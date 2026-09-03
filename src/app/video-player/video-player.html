@@ -1,3 +1,10 @@
-<p>video-player works!</p>
+<h3>Video Player</h3>
 
-{{ video() | json }}
+@if (video(); as v) {
+  <img
+    alt="Pretty picture"
+    [src]="'http://img.youtube.com/vi/' + v.id + '/0.jpg'"
+  />
+
+  <p>{{ v.title }}</p>
+}
