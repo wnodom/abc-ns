@@ -1,5 +1,8 @@
 <h2>Dashboard</h2>
 
-<ns-video-list [videos]="videosSignal()" />
-<ns-video-player />
+<ns-video-list
+  [videos]="videosSignal()"
+  (currentVideoChanged)="onVideoChanged($event)"
+/>
+<ns-video-player [video]="currentVideo()" />
 <ns-stat-filters />

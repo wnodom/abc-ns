@@ -26,9 +26,9 @@ export class VideoDataManager {
     return this.http
       .get<Video[]>('https://api.angularbootcamp.com/videos')
       .pipe(
-        tap((data) => console.table(data)),
+        // tap((data) => console.table(data)),
         map(this.uppercaseAllAuthorNames.bind(this)),
-        tap((data) => console.table(data)),
+        // tap((data) => console.table(data)),
       );
   }
 }

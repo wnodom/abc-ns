@@ -2,7 +2,7 @@
 
 @for (video of videos(); track video.id) {
   <button
-    (click)="currentVideo.set(video)"
+    (click)="updateCurrentVideo(video)"
     [class.highlighted]="video === currentVideo()"
   >
     {{ video.title }}<br />
