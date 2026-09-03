@@ -5,6 +5,11 @@
     (click)="updateCurrentVideo(video)"
     [class.highlighted]="video === currentVideo()"
   >
+    <img
+      alt="Pretty picture"
+      [src]="'http://img.youtube.com/vi/' + video.id + '/0.jpg'"
+    />
+
     {{ video.title }}<br />
     {{ video.author }}
   </button>
